@@ -9,4 +9,5 @@ gpg --full-generate-key # con esto genero la llave publica y privada
  echo "que te importa">doc_no_cifrado.txt # Se crea un archivo con el mensaje
  gpg --output doc_cifrado.txt --encrypt --recipient davidsvaca07@gmail.com doc_no_cifrado.txt # Cifra el archivo para que la persona que tiene la llave pueda leerlo
  gpg --decrypt doc_cifrado1.txt # descifra una archivo
+ gpg --clearsign doc_cifrado1.txt # Este comando creo un archivo txt.asc
  
