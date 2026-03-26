@@ -11,3 +11,5 @@ gpg --full-generate-key # con esto genero la llave publica y privada
  gpg --decrypt doc_cifrado1.txt # descifra una archivo
  gpg --clearsign doc_cifrado1.txt # Este comando creo un archivo txt.asc
  gpg --sign doc_cifrado1.txt.asc # Este comando lo que hace es firmar el archivo
+ gpg --verify doc_cifrado1.txt.asc # Este comado ferifica que si se halla confirmado la firma
+ gpg --edit-key davidsvaca07@gmail.com # abre el menu de edicion interactivo
