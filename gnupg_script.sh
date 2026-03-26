@@ -7,3 +7,4 @@ gpg --full-generate-key # con esto genero la llave publica y privada
  gpg --armor --export adriangarciasnchez@gmail.com  > mi_llave_publica.asc # Exporta mi llave publica
  gpg --import micompa.asc  llave-publica.asc # Importa la llave de mi compa
  echo "que te importa">doc_no_cifrado.txt # Se crea un archivo con el mensaje
+ gpg --output doc_cifrado.txt --encrypt --recipient davidsvaca07@gmail.com doc_no_cifrado.txt # Cifra el archivo para que la persona que tiene la llave pueda leerlo
