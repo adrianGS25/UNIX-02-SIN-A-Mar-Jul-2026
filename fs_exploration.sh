@@ -7,3 +7,7 @@ sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e  # That command combi
 sudo parted -l # lists all storage devices and their partition tables on your system
 lsblk -f # shows information about your block devices
 [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS" # That command detects whether your system is booting in UEFI or BIOS.
+echo "miarchivo" > test.txt # create a file
+ls # list files
+cat test.txt
+stat test.txt
