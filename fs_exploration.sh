@@ -6,3 +6,4 @@ sudo apt install parted # install parted
 sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e  # That command combines several instructions to display detailed information about your disks and partitions
 sudo parted -l # lists all storage devices and their partition tables on your system
 lsblk -f # shows information about your block devices
+[ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS" # That command detects whether your system is booting in UEFI or BIOS.
