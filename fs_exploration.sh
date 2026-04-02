@@ -9,5 +9,5 @@ lsblk -f # shows information about your block devices
 [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS" # That command detects whether your system is booting in UEFI or BIOS.
 echo "miarchivo" > test.txt # create a file
 ls # list files
-cat test.txt
-stat test.txt
+cat test.txt # show the content of the file
+stat test.txt # show detailer content of the file
