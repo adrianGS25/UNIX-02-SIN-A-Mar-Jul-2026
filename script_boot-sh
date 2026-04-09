@@ -2,3 +2,10 @@ mkdir proyecto # It creates a folder
 cd proyecto/ # It helps us to change to the folder proyecto/
 cd /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/proyecto # It helps us to change to the folder proyecto/ whit all the directory name
 cd .. # move to the principal directories
+pwd #  It shows in what directory you are
+cd #to go to home directory
+cd ~ # to go to home directory
+cd $HOME # to go to home directory
+cd /home/codespace $ to go to home directory
+echo $BASH # Print the variable of BASH
+echo $PATH # print the executable programs
