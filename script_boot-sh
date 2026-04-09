@@ -18,3 +18,4 @@ cd /bin # moves you directly to the bin directory located at the root of the sys
 cd .. # Moves you up one level in the folder hierarchy
 . # The current directory
 .. # The parent directory
+stat . # is like an advanced ls 
