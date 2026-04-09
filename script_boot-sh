@@ -9,3 +9,12 @@ cd $HOME # to go to home directory
 cd /home/codespace $ to go to home directory
 echo $BASH # Print the variable of BASH
 echo $PATH # print the executable programs
+ls -lai # Displays files in a long list format
+ls -l -a -i # Displays files in a long-list format
+man ls # Opens the manual page
+ls -all # showing all files
+ls -a # showing all files
+cd /bin # moves you directly to the bin directory located at the root of the system.
+cd .. # Moves you up one level in the folder hierarchy
+. # The current directory
+.. # The parent directory
