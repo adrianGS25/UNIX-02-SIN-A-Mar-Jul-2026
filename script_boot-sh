@@ -1,0 +1,3 @@
+mkdir proyecto # It creates a folder
+cd proyecto/ # It helps us to change to the folder proyecto/
+cd /workspaces/UNIX-02-SIN-A-Mar-Jul-2026/proyecto # It helps us to change to the folder proyecto/ whit all the directory name
