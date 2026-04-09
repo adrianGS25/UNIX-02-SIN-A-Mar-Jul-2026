@@ -23,3 +23,6 @@ Device: 7,4     Inode: 1573138     Links: 2 #
 device # This identifies the specific physical or virtual partition on the hard drive where the data is stored.
 Inode # The Inode Index Node is like the Social Security Number of your file or folder.
 Links # This tells you how many different names or paths are pointing to this exact same location on the disk. For a standard director
+whoami # t prints the effective username of the current user associated with the terminal session.
+ls -lt # sort your files by time, showing the most recently modified files at the top.
+ls /etc |tail -20 # that combines two different tools to give you a specific slice of information.
