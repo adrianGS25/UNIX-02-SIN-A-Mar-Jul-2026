@@ -16,3 +16,6 @@ chmod +x script.sh # todos pueden ejecutarlo
 chmod u+x script.sh # solo el dueño puede ejecitralo
 chmod o-r secreto.txt # quita la lectura de "others"
 chmod u+rw.go-rwx privado # dueño lee/escribe y nadie mas puede hacerlo
+sudo echo "hola" > /etc/archivo_protegido # It doesn´t work correctly because sudo doesn´t apply to redirection (>)
+sudo echo "hola" | sudo tee /etc/archivo_protegido > /dev/null # write to a protected file using sudo correctly
+sudo echo "hola" | sudo tee /etc/archivo_protegido # write "hola" on a protected achive using admin permission
