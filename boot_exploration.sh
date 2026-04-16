@@ -11,4 +11,8 @@ rmdir -- -rf # It removes the directory literally named -rf.
           # If you want to clone submodules shallowly, also pass --shallow-submodules.
 # We use /(the comand you want to search) to see what it means
 # n to go down
-# N to go up 
+# N to go up
+chmod +x script.sh # todos pueden ejecutarlo
+chmod u+x script.sh # solo el dueño puede ejecitralo
+chmod o-r secreto.txt # quita la lectura de "others"
+chmod u+rw.go-rwx privado # dueño lee/escribe y nadie mas puede hacerlo
