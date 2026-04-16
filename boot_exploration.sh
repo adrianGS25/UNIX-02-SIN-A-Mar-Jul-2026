@@ -4,3 +4,5 @@ ls -l # List the contents of a directory in long format
 ls -h # It is used to make file sizes easy for a human to read.
 ls -l -a -h # It is the "complete package" for inspecting a directory.
 ls -lah # It is the "complete package" for inspecting a directory.
+mkdir -- -rf # It creates a directory literally named -rf
+rmdir -- -rf # It removes the directory literally named -rf.
