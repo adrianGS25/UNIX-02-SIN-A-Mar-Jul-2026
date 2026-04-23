@@ -29,3 +29,12 @@ sudo su- # It makes you a superuser (root) by starting a clean session with the 
 sudo su # It makes you a superuser (root) but keeps, by default, the environment variables of your normal user.
 echo "$HOME" # expand the variable
 echo '$HOME' # print literal "$HOME"
+
+echo '#!/bin/sh' > hola.sh # Create a new file called hola.sh and write the "shebang" on its first line, which tells the system to run it as a shell script.
+echo 'echo "Hola desde mi primer script"' >> hola.sh # Add an instruction to the hola.sh file so that, when executed, it prints the message "Hello from my first script" in the terminal.
+cat hola.sh # Display on the screen the code you just wrote inside the hola.sh file.
+./hola.sh # Try running the script hola.sh as a standalone program in your current folder.
+ls -l hola.sh # It displays detailed information about the hola.sh file, allowing you to see who owns it and what read, write, or execute permissions it has.
+chmod +x hola.sh # Convert the hola.sh file into an executable program, giving the system permission to run the code it contains.
+ls -l hola.sh # It displays detailed information about the hola.sh file, allowing you to see who owns it and what read, write, or execute permissions it has.
+./hola.sh # Run the script and display the final result: the message "Hello from my first script" printed on your terminal.
