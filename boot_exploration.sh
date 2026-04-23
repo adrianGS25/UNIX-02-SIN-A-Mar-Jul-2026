@@ -38,3 +38,8 @@ ls -l hola.sh # It displays detailed information about the hola.sh file, allowin
 chmod +x hola.sh # Convert the hola.sh file into an executable program, giving the system permission to run the code it contains.
 ls -l hola.sh # It displays detailed information about the hola.sh file, allowing you to see who owns it and what read, write, or execute permissions it has.
 ./hola.sh # Run the script and display the final result: the message "Hello from my first script" printed on your terminal.
+touch prueba.txt # Create an empty file called test.txt or, if it already exists, update its last modified date without changing the content.
+chmod 600 prueba.txt # Change the file permissions so that only you can read and edit it, prohibiting any access to other users.
+ls -l prueba.txt # Display the details of the test.txt file to confirm that the permissions were applied correctly and only you now have access.
+chmod 755 prueba.txt # Cambia los permisos para que tú tengas control total sobre el archivo, mientras que el resto de los usuarios solo puedan leerlo y ejecutarlo.
+ls -l prueba.txt # Relist the file details to confirm that it now has public read and execute permissions.
