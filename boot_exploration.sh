@@ -27,3 +27,5 @@ sudo -i # Abre una sesión interactiva como superusuario (root), convirtiendo tu
 exit # Close the current terminal session or exit administrator mode to return to your normal user account.
 sudo su- # It makes you a superuser (root) by starting a clean session with the full administrator environment.
 sudo su # It makes you a superuser (root) but keeps, by default, the environment variables of your normal user.
+echo "$HOME" # expand the variable
+echo '$HOME' # print literal "$HOME"
