@@ -4,3 +4,4 @@ echo "[$(date -Iseconds)] ejecución OK"
 # fix 4
 # fix 4
 # sync
+# suid activo
