@@ -23,3 +23,8 @@ sudo sl # Executes the 'sl' command with root privileges without changing shells
 sudo -u sysadmin sl # Executes a command specifically as the 'sysadmin' user
 su -l # Starts a login shell for the root user
 su --login # Starts a login shell, loading the full environment of the root user
+cd ~/Documents # Moves to the Documents directory to work with permissions
+ls -l hello.sh # Displays detailed permissions for the hello.sh file
+chmod u+x hello.sh # Adds execute permission for the owner of the file
+ls -l hello.sh # Verifies the new permissions in the file listing
+./hello.sh # Executes the script from the current directory
