@@ -43,3 +43,4 @@ head # Preview of a specific part of a file.
 Tail # Preview of a specific part of a file.
 cp # to copy files
 mp # Organize files, rename files, and create backups
+dd # It is one of the most powerful and "dangerous" tools in Linux. Unlike cp, which copies files at a logical level, dd copies data at a low level (bit by bit).
