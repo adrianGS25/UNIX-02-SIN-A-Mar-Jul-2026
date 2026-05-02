@@ -28,3 +28,6 @@ ls -l hello.sh # Displays detailed permissions for the hello.sh file
 chmod u+x hello.sh # Adds execute permission for the owner of the file
 ls -l hello.sh # Verifies the new permissions in the file listing
 ./hello.sh # Executes the script from the current directory
+sudo chown root hello.sh # Changes the file owner to root (requires administrative access)
+ls -l hello.sh # Verifies that the owner has changed to root
+sudo ./hello.sh # Executes the script as root since the original user lost permission
