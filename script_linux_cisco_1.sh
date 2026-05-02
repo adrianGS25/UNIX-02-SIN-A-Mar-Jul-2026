@@ -17,3 +17,9 @@ ls -lt /var/log # Sorts files in /var/log by modification time
 ls -lS /var/log # Sorts files in /var/log by file size
 ls -lSr /var/log # Sorts files in /var/log by size in ascending order
 ls -r /var/log # Lists files in /var/log in reverse alphabetical order
+su - # Switches to the root user by opening a new login shell
+exit # Closes the current shell and returns to the previous user
+sudo sl # Executes the 'sl' command with root privileges without changing shells
+sudo -u sysadmin sl # Executes a command specifically as the 'sysadmin' user
+su -l # Starts a login shell for the root user
+su --login # Starts a login shell, loading the full environment of the root user
