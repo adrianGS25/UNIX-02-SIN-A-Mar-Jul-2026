@@ -12,3 +12,8 @@ cd School/Art # Navigates to the Art directory using a multi-level relative path
 cd .. # Moves up one level to the parent directory
 cd . # Represents the current directory (no movement)
 cd ~ # Returns to the current user's home directory
+ls -l /var/log/ # Lists detailed information about files in /var/log
+ls -lt /var/log # Sorts files in /var/log by modification time
+ls -lS /var/log # Sorts files in /var/log by file size
+ls -lSr /var/log # Sorts files in /var/log by size in ascending order
+ls -r /var/log # Lists files in /var/log in reverse alphabetical order
