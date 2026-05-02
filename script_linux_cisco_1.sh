@@ -41,4 +41,5 @@ tail -n 5 alpha.txt # Displays exactly the last 5 lines of the file
 cat # Show us whats inside the file
 head # Preview of a specific part of a file.
 Tail # Preview of a specific part of a file.
-
+cp # to copy files
+mp # Organize files, rename files, and create backups
