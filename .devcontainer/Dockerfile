@@ -235,6 +235,29 @@ PROMPT_COMMAND=__set_prompt
 EOF
 CMD ["/bin/bash"]
 
+# Instalar zsh y nano
+RUN apt-get update && apt-get install -y \
+    zsh \
+    nano
 
+# Crear configuración zsh personalizada
+RUN echo '\
+set_prompt() {\n\
+    local ec=$?\n\
+\n\
+    if [[ $ec -eq 0 ]]; then\n\
+        symbol="%F{green}✔️%f"\n\
+    else\n\
+        symbol="%F{red}✘%f"\n\
+    fi\n\
+\n\
+    PROMPT=$'\''%F{blue}┌──(%F{cyan}root%F{magenta}㉿%F{green}David-Vaca%F{blue})-[%F{yellow}%~%F{blue}]\\n└─'\''"$symbol "'\''%# %f'\''\n\
+}\n\
+\n\
+precmd_functions+=(set_prompt)\n\
+' > /root/.zshrc
+
+# Cambiar shell por defecto
+RUN chsh -s /usr/bin/zsh root
 
 
