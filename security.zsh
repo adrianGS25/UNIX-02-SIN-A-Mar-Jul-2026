@@ -19,3 +19,12 @@ echo "Hola" > archivo # create a new file
 ls -l archivo # Give us the permissions
 useradd -m -s /usr/bin/zsh luna # create a new user
 chown luna archivo # Changes the owner of the file named "archivo" to the user "luna".
+groups # Displays the list of groups the current user belongs to
+groupadd grupo_test # Creates a new group named "grupo_test"
+groups # Displays groups again to verify the creation of the new group
+touch comun # Creates an empty file named "comun"
+ls -l comun # Shows the current permissions and ownership of the file "comun"
+usermod -a -G grupo_test luna # Adds user "luna" to "grupo_test" without removing other groups
+chgrp grupo_test comun # Changes the group ownership of the file "comun" to "grupo_test"
+ls -l comun # Verifies that the group for "comun" has been updated to "grupo_test"
+                  
