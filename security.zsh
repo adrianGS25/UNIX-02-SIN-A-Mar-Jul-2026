@@ -27,4 +27,10 @@ ls -l comun # Shows the current permissions and ownership of the file "comun"
 usermod -a -G grupo_test luna # Adds user "luna" to "grupo_test" without removing other groups
 chgrp grupo_test comun # Changes the group ownership of the file "comun" to "grupo_test"
 ls -l comun # Verifies that the group for "comun" has been updated to "grupo_test"
+chown luna:grupo_test archivo # Changes both the owner to "luna" and the group to "grupo_test" for the file "archivo"
+ls -l archivo # Displays the detailed permissions and ownership to verify the changes
+mkdir -p proyecto/sub # Creates the directory 'proyecto' and its subdirectory 'sub' at once
+touch proyecto/readme proyecto/sub/datos # Creates 'readme' in the main folder and 'datos' in the subfolder
+chown -R luna:grupo_test proyecto # Recursively changes owner to 'luna' and group to 'grupo_test' for the entire tree
+ls -lR proyecto # Recursively lists all files and folders showing their new owner and group
                   
