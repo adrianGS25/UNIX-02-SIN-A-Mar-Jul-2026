@@ -13,3 +13,9 @@ umask # Displays the current active umask value
 ls -l # Lists files in long format to verify ownership and permissions
 .
 *   **Resetea permisos**: `setfacl -bnR .` elimina cualquier regla de permisos extraña que pudiera estar bloqueando tus archivos.
+touch archivo # create an archive
+whoami # shows the name of the user of the actual  session
+echo "Hola" > archivo # create a new file
+ls -l archivo # Give us the permissions
+useradd -m -s /usr/bin/zsh luna # create a new user
+chown luna archivo # Changes the owner of the file named "archivo" to the user "luna".
