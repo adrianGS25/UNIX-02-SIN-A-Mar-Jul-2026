@@ -37,3 +37,6 @@ ls -lR proyecto # Recursively lists all files and folders showing their new owne
 # clase 14-5-2026
 cat /etc/passwd | head -10 # see all the users system
 id # user id numeric, principal group (primary group), secundary groups
+id -u # User ID
+id -g # Group principal ID
+id -G # All the gropus
