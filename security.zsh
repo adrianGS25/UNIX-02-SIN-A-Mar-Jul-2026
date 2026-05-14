@@ -33,4 +33,7 @@ mkdir -p proyecto/sub # Creates the directory 'proyecto' and its subdirectory 's
 touch proyecto/readme proyecto/sub/datos # Creates 'readme' in the main folder and 'datos' in the subfolder
 chown -R luna:grupo_test proyecto # Recursively changes owner to 'luna' and group to 'grupo_test' for the entire tree
 ls -lR proyecto # Recursively lists all files and folders showing their new owner and group
-                  
+
+# clase 14-5-2026
+cat /etc/passwd | head -10 # see all the users system
+id # user id numeric, principal group (primary group), secundary groups
