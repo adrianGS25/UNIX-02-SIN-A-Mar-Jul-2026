@@ -6,3 +6,12 @@ ls -la ~/test_grupo_heredado.txt # main group of the user
 echo "Grupo actual: $(id -gn)" # se the actual group
 touch ~/antes_de_newgrp.txt # create a new file before newgrp
 ls -ls ~/antes_de_newgrp.txt # create a new file before newgrp
+groupadd desarrolladores # create the group desarrolladores
+newgrp desarrolladores # chenge to group desarrolladores
+echo "Nuevo grupo activo: $(id -gn)"
+# create an archive inside the subshell
+touch ~/dentro_de_newgrp.txt
+ls -la ~/dentro_de_newgrp.txt
+# the group now is "desarrolladores"
+mkdir-p ~/proyecto_dev/src # create a directory
+ ls -ls ~/
