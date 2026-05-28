@@ -21,3 +21,7 @@ exit
 # verify that we return to the original group
 id -gn
 echo "Grupo restaurado: $(id -gn)"
+# create a group ehith password
+sudo groupadd grupo_restringido
+sudo gpasswd grupo_restringido
+# the system will ask a password for the group
