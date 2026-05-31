@@ -248,3 +248,30 @@ passwd sysadmin
 
 # Salir de la sesión de root
 exit
+
+# Cambiar al directorio Documents
+cd ~/Documents
+
+# Ver el contenido original del archivo food.txt (se muestra en STDOUT)
+cat food.txt
+
+# Redirigir la salida (STDOUT) de cat a un nuevo archivo (sobrescribe o crea)
+cat food.txt > newfile1.txt
+
+# Verificar que el contenido se guardó en el nuevo archivo
+cat newfile1.txt
+
+# Imprimir un texto simple en la terminal con echo
+echo "Hello"
+
+# Redirigir con un solo '>' sobrescribe por completo el contenido existente
+echo "I like food." > newfile1.txt
+
+# Verificar el cambio por sobrescritura
+cat newfile1.txt
+
+# Redirigir con doble '>>' añade (append) contenido al final del archivo sin borrar lo anterior
+echo "This food is good." >> newfile1.txt
+
+# Verificar que se añadió el texto correctamente
+cat newfile1.txt
