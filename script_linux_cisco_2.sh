@@ -203,3 +203,33 @@ ps -e
 # UID: User ID owner of the process
 # PPID: Parent Process ID
 ps -ef
+
+# Package Management (Debian/Ubuntu apt tools)
+# Note: Most of these commands require administrative privileges via 'sudo'
+
+# Update the local package index cache from remote repositories
+sudo apt-get update
+
+# Search for available packages matching a specific keyword in repositories
+# Example: searching for packages related to 'cow'
+apt-cache search cow
+
+# Install a new software package from the repositories
+# Example: installing the 'cowsay' package
+sudo apt-get install cowsay
+
+# Execute the installed package to verify its functionality
+# Recommended to wrap the text in single quotes to protect it from shell interpretation
+cowsay 'NDG Linux Unhatched'
+
+# Upgrade all currently installed packages to their latest versions
+# Step 1: Refresh repository lists (done above)
+# Step 2: Perform the system upgrade
+sudo apt-get upgrade
+
+# Remove a package but preserve its local configuration files
+# sudo apt-get remove cowsay
+
+# Completely purge a package, removing its binaries and all configuration files
+# The '-y' option can be appended to assume 'yes' to prompts automatically
+sudo apt-get purge cowsay
