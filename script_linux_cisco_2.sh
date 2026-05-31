@@ -90,3 +90,54 @@ grep "bin[^ab]" passwd
 
 # Match 'ss' followed by zero or more 'h' characters
 grep "ssh*" passwd
+
+# Move to the Documents directory to execute regex tests
+cd ~/Documents
+
+
+# 1. Anchor Characters (^ and $)
+
+# Match lines where 'root' is strictly at the BEGINNING of the line in /etc/passwd
+grep '^root' /etc/passwd
+
+# Match lines that end with the letter 'r' in the alpha-first.txt file
+grep 'r$' alpha-first.txt
+
+# 2. Matching Characters Using Dot (.)
+
+# Match lines with 'r', followed by exactly two wildcards, and ending with 'f'
+grep 'r..f' red.txt
+
+# Match words of four letters starting with 'r' and ending with 'd'
+grep 'r..d' red.txt
+
+# Match any lines containing at least four characters in total
+grep '....' red.txt
+
+# Match 'r', followed by any two characters, and ending with 't' in /etc/passwd
+grep 'r..t' /etc/passwd
+
+# 3. Matching Single Characters / Ranges Using Bracket Expressions [ ]
+
+# Match lines in profile.txt containing any single digit from 0 to 9
+grep '[0-9]' profile.txt
+
+# Match lines containing at least one non-numeric character using the bracket negation (^)
+grep '[^0-9]' profile.txt
+
+# Match lines containing a literal dot character by placing it inside brackets
+grep '[.]' profile.txt
+
+# 4. Matching Repeated Patterns Using Asterisk (*)
+
+# Match 'r', followed by zero or more 'e' characters, and ending with 'd'
+grep 're*d' red.txt
+
+# Match 'r', followed by zero or more occurrences of 'o' or 'e', ending with 'd'
+grep 'r[oe]*d' red.txt
+
+# Match lines containing at least one 'e' character (using 'ee*' to ensure a minimum of one match)
+grep 'ee*' red.txt
+
+# Return to the user's home directory
+cd ~
