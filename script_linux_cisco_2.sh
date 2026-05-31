@@ -13,3 +13,28 @@ dd if=/dev/zero of=/tmp/swapex bs=1M count=50
 # of=/dev/sdb: Destination hard drive (output)
 # Note: Block size (bs) and count are not required when cloning entire drives
 # dd if=/dev/sda of=/dev/sdb
+
+# Change the current working directory to the Documents folder
+cd ~/Documents
+
+# Move a single file (people.csv) into a directory (Work)
+# The file retains its original name because no new name was specified in the destination
+mv people.csv Work
+
+# Verify that the file was successfully moved by listing the contents of the Work directory
+ls Work
+
+# Move multiple source files (numbers.txt, letters.txt, alpha.txt) into a single destination directory (School)
+# Note: The final argument must always be the destination directory
+mv numbers.txt letters.txt alpha.txt School
+
+# Verify the multiple files movement by listing the contents of the School directory
+ls School
+
+# Rename a file within the same directory by moving it to a new filename
+# This changes 'animals.txt' to 'zoo.txt' without changing its physical location
+mv animals.txt zoo.txt
+
+# List the current directory contents to confirm the renaming from animals.txt to zoo.txt
+ls
+
