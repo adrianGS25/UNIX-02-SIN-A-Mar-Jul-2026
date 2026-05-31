@@ -69,3 +69,24 @@ cp /etc/passwd .
 # Target File: 'passwd'
 # This filters the large file to show only the account details for the sysadmin user
 grep sysadmin passwd
+
+
+# Regular Expressions (Regex) Documentation
+
+# Match lines where 'sysadmin' is at the BEGINNING of the line
+grep "^sysadmin" passwd
+
+# Match lines where 'bash' is at the END of the line
+grep "bash$" passwd
+
+# Match 'r', followed by ANY single character, followed by 'o' (e.g., 'roo')
+grep "r.o" passwd
+
+# Match 'bin' followed by either 'a', 'b', or 'h'
+grep "bin[abh]" passwd
+
+# Match 'bin' followed by any character EXCEPT 'a' or 'b'
+grep "bin[^ab]" passwd
+
+# Match 'ss' followed by zero or more 'h' characters
+grep "ssh*" passwd
