@@ -141,3 +141,24 @@ grep 'ee*' red.txt
 
 # Return to the user's home directory
 cd ~
+
+# System Shutdown and Date Administration
+# Note: These commands require administrative (root) privileges
+
+# Switch to the root user account before executing (interactive command)
+# su -
+
+# Check the current system time in Universal Time Coordinated (UTC) format
+date
+
+# Shut down the system immediately (NOW)
+shutdown now
+
+# Schedule a system shutdown at a specific time of day (Format hh:mm)
+# Example: scheduling it for 01:51 UTC
+shutdown 01:51
+
+# Schedule a system shutdown with a time delay in minutes and a custom broadcast message
+# +1: Delays the shutdown execution by 1 minute
+# "Goodbye World!": Custom message sent to all active terminal sessions
+shutdown +1 "Goodbye World!"
