@@ -162,3 +162,25 @@ shutdown 01:51
 # +1: Delays the shutdown execution by 1 minute
 # "Goodbye World!": Custom message sent to all active terminal sessions
 shutdown +1 "Goodbye World!"
+
+# Network Configuration and Connectivity
+
+# Display active network interfaces and IP configurations
+# eth0: Main Ethernet interface (active IPv4 e.g., 192.168.1.2)
+# lo: Loopback interface used by the system to send network data to itself
+ifconfig
+
+# Note on wireless networks:
+# 'iwconfig' is used similarly to ifconfig but specifically for wireless interfaces
+# iwconfig
+
+# Test network connectivity to a local host with a limit of 4 packets
+# -c 4: Limits the ping command to exactly 4 echo requests (prevents infinite loop)
+ping -c 4 192.168.1.2
+
+# Example of a failing ping request to an unreachable destination host
+# This demonstrates network troubleshooting and 100% packet loss tracking
+ping -c 4 192.168.1.3
+
+# Exit administrative root session and return to the standard user shell
+exit
