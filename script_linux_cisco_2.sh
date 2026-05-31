@@ -57,3 +57,15 @@ rm -r Work
 
 # Verify that the directory was successfully deleted
 ls Work
+
+# Change the current working directory to the Documents folder
+cd ~/Documents
+
+# Copy the system password file to the current directory as a prerequisite
+cp /etc/passwd .
+
+# Use 'grep' to search for and display lines that match a specific pattern
+# Pattern: 'sysadmin'
+# Target File: 'passwd'
+# This filters the large file to show only the account details for the sysadmin user
+grep sysadmin passwd
