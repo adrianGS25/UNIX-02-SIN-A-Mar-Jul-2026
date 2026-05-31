@@ -233,3 +233,18 @@ sudo apt-get upgrade
 # Completely purge a package, removing its binaries and all configuration files
 # The '-y' option can be appended to assume 'yes' to prompts automatically
 sudo apt-get purge cowsay
+
+# Cambiar la contraseña del usuario actual (interactivo)
+passwd
+
+# Ver el estado y la configuración de la contraseña del usuario sysadmin
+passwd -S sysadmin
+
+# Cambiar a la cuenta de root (requiere contraseña)
+su root
+
+# Como root, cambiar la contraseña de un usuario específico sin pedir la actual
+passwd sysadmin
+
+# Salir de la sesión de root
+exit
