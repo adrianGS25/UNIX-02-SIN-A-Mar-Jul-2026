@@ -185,3 +185,21 @@ ping -c 4 192.168.1.3
 # Exit administrative root session and return to the standard user shell
 exit
 
+# Process Monitoring and Viewing (ps command)
+
+# Display active processes running in the current terminal session
+# Output columns:
+# PID: Unique Process Identifier
+# TTY: Terminal name associated with the process
+# TIME: Total CPU processing time used
+# CMD: The command that initiated the process
+ps
+
+# Display EVERY process currently running on the system using the -e option
+ps -e
+
+# Display a full-format (detailed) listing of all running processes using -ef
+# Adds extra columns like:
+# UID: User ID owner of the process
+# PPID: Parent Process ID
+ps -ef
