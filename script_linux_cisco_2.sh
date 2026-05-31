@@ -275,3 +275,43 @@ echo "This food is good." >> newfile1.txt
 
 # Verificar que se añadió el texto correctamente
 cat newfile1.txt
+
+# Abrir o crear un archivo en el editor
+vi newfile.txt
+
+#COMANDOS DE MOVIMIENTO (Se presionan dentro de vi)
+h          # Mueve el cursor un carácter a la izquierda
+j          # Mueve el cursor a la línea siguiente (abajo)
+k          # Mueve el cursor a la línea anterior (arriba)
+l          # Mueve el cursor un carácter a la derecha
+w          # Avanza una palabra hacia adelante
+b          # Retrocede una palabra hacia atrás
+^          # Mueve el cursor al principio de la línea actual
+$          # Mueve el cursor al final de la línea actual
+gg         # Mueve el cursor a la primera línea del archivo
+G          # Mueve el cursor a la última línea del archivo
+5G         # Mueve el cursor directamente a la línea número 5
+
+#ACCIONES DE EDICIÓN (Cortar, Copiar y Pegar dentro de vi)
+dd         # Elimina (corta) la línea actual
+3dd        # Elimina (corta) las tres líneas siguientes
+dw         # Elimina (corta) la palabra actual
+yy         # Saca (copia) la línea actual al búfer
+3yy        # Saca (copia) las tres líneas siguientes
+p          # Pone (pega) el contenido del búfer después del cursor
+P          # Pone (pega) el contenido del búfer antes del cursor
+
+#MODOS DE INSERCIÓN (Para empezar a escribir texto)
+i          # Comienza a insertar texto justo antes del cursor
+a          # Comienza a insertar texto justo después del cursor
+I          # Comienza a insertar texto al principio de la línea
+A          # Comienza a insertar texto al final de la línea
+o          # Abre una nueva línea abajo del cursor e inserta texto
+O          # Abre una nueva línea arriba del cursor e inserta texto
+
+#MODO EX (Operaciones de archivos, presiona ESC antes
+:w         # Escribe (guarda) los cambios en el archivo
+:w copia.txt   # Guarda una copia del archivo con el nombre 'copia.txt'
+:q         # Sale del editor (falla si hay cambios sin guardar)
+:q!        # Fuerza la salida descartando todos los cambios
+:wq        # Guarda los cambios y sale del editor (igual que presionar ZZ)
