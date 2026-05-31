@@ -38,3 +38,22 @@ mv animals.txt zoo.txt
 # List the current directory contents to confirm the renaming from animals.txt to zoo.txt
 ls
 
+# Change the current working directory to the Documents folder
+cd ~/Documents
+
+# Delete a regular file using the rm (remove) command
+# Note: Files deleted with rm are permanently removed and do not go to a trash bin
+rm linux.txt
+
+# Attempt to verify deletion (this will return a 'No such file or directory' error)
+ls linux.txt
+
+# Attempt to delete a directory without options (this will fail with an 'Is a directory' error)
+# rm Work
+
+# Delete a directory and all of its contents recursively using the -r option
+# Warning: This permanently deletes the directory, its files, and all subdirectories
+rm -r Work
+
+# Verify that the directory was successfully deleted
+ls Work
