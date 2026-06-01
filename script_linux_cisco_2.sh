@@ -279,39 +279,42 @@ cat newfile1.txt
 # Abrir o crear un archivo en el editor
 vi newfile.txt
 
-#COMANDOS DE MOVIMIENTO (Se presionan dentro de vi)
-h          # Mueve el cursor un carácter a la izquierda
-j          # Mueve el cursor a la línea siguiente (abajo)
-k          # Mueve el cursor a la línea anterior (arriba)
-l          # Mueve el cursor un carácter a la derecha
-w          # Avanza una palabra hacia adelante
-b          # Retrocede una palabra hacia atrás
-^          # Mueve el cursor al principio de la línea actual
-$          # Mueve el cursor al final de la línea actual
-gg         # Mueve el cursor a la primera línea del archivo
-G          # Mueve el cursor a la última línea del archivo
-5G         # Mueve el cursor directamente a la línea número 5
+# Open or create a file in the editor
+vi newfile.txt
 
-#ACCIONES DE EDICIÓN (Cortar, Copiar y Pegar dentro de vi)
-dd         # Elimina (corta) la línea actual
-3dd        # Elimina (corta) las tres líneas siguientes
-dw         # Elimina (corta) la palabra actual
-yy         # Saca (copia) la línea actual al búfer
-3yy        # Saca (copia) las tres líneas siguientes
-p          # Pone (pega) el contenido del búfer después del cursor
-P          # Pone (pega) el contenido del búfer antes del cursor
+#NAVIGATION COMMANDS (Pressed inside vi)
+h          # Move cursor one character to the left
+j          # Move cursor to the next line (down)
+k          # Move cursor to the previous line (up)
+l          # Move cursor one character to the right
+w          # Move forward one word
+b          # Move backward one word
+^          # Move cursor to the beginning of the current line
+$          # Move cursor to the end of the current line
+gg         # Move cursor to the first line of the file
+G          # Move cursor to the last line of the file
+5G         # Move cursor directly to line number 5
 
-#MODOS DE INSERCIÓN (Para empezar a escribir texto)
-i          # Comienza a insertar texto justo antes del cursor
-a          # Comienza a insertar texto justo después del cursor
-I          # Comienza a insertar texto al principio de la línea
-A          # Comienza a insertar texto al final de la línea
-o          # Abre una nueva línea abajo del cursor e inserta texto
-O          # Abre una nueva línea arriba del cursor e inserta texto
+#EDITING ACTIONS (Cut, Copy, and Paste inside vi
+dd         # Delete (cut) the current line
+3dd        # Delete (cut) the next three lines
+dw         # Delete (cut) the current word
+yy         # Yank (copy) the current line to the buffer
+3yy        # Yank (copy) the next three lines
+p          # Put (paste) the buffer contents after the cursor
+P          # Put (paste) the buffer contents before the cursor
 
-#MODO EX (Operaciones de archivos, presiona ESC antes
-:w         # Escribe (guarda) los cambios en el archivo
-:w copia.txt   # Guarda una copia del archivo con el nombre 'copia.txt'
-:q         # Sale del editor (falla si hay cambios sin guardar)
-:q!        # Fuerza la salida descartando todos los cambios
-:wq        # Guarda los cambios y sale del editor (igual que presionar ZZ)
+#INSERT MODES (To start typing text)
+i          # Start inserting text right before the cursor
+a          # Start inserting text right after the cursor
+I          # Start inserting text at the beginning of the line
+A          # Start inserting text at the end of the line
+o          # Open a new line below the cursor and insert text
+O          # Open a new line above the cursor and insert text
+
+#EX MODE (File operations, press ESC first)
+:w         # Write (save) changes to the file
+:w copy.txt   # Save a copy of the file named 'copy.txt'
+:q         # Quit the editor (fails if there are unsaved changes)
+:q!        # Force quit discarding all changes
+:wq        # Save changes and quit the editor (same as pressing ZZ)
