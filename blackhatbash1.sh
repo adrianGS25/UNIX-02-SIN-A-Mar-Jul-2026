@@ -11,3 +11,4 @@ ps -ef
 bash -r blackhatbash1.sh
 bash -n blackhatbash1.sh
 bash -x blackhatbash1.sh
+set +x
