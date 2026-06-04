@@ -220,14 +220,16 @@ RUN git config --system --add safe.directory '*' \
 # Prompt del curso para bash
 
 # Cambiar shell de login de root a zsh
-RUN chsh -s /usr/bin/zsh root
+RUN chsh -s /bin/bash root
 
 # Configurar el prompt institucional en el .zshrc
-RUN cat >> /root/.zshrc <<'EOF'
+RUN cat >> /root/.bashrc <<'EOF'
+export PS1="\[\e[36m\][\u]\[\e[33m\] \h \[\e[32m\]✓\[\e[0m\] # "
+EOF
 
 # ===== Valida si un comando fue ejecutado correctamente =====
 PROMPT='%F{cyan}[Adrian_Garcia]%f %F{yellow}%1~%f %(?.%F{green}✔.%F{red}✘ %?)%f %# '
 EOF
 
 # Comando por defecto al arrancar
-CMD ["/usr/bin/zsh"]
+CMD ["/bin/bash"]
