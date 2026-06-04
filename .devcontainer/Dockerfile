@@ -219,17 +219,15 @@ RUN git config --system --add safe.directory '*' \
 # definida para que la imagen sea usable también con Docker puro.
 # Prompt del curso para bash
 
-# Cambiar shell de login de root a zsh
+# 1. Asegurar que la shell por defecto del usuario root sea Bash
 RUN chsh -s /bin/bash root
 
-# Configurar el prompt institucional en el .zshrc
-RUN cat >> /root/.bashrc <<'EOF'
-export PS1="\[\e[36m\][\u]\[\e[33m\] \h \[\e[32m\]✓\[\e[0m\] # "
+# 2. Limpiar el .bashrc por defecto de Kali e inyectar tu prompt personalizado
+RUN echo "" > /root/.bashrc && cat >> /root/.bashrc <<'EOF'
+
+# Prompt personalizado institucional (Clonado en Bash)
+export PS1="\[\e[36m\][Adrian_Garcia]\[\e[33m\] UNIX-02-SIN-A-Mar-Jul-2026 \[\e[32m\]✓\[\e[0m\] # "
 EOF
 
-# ===== Valida si un comando fue ejecutado correctamente =====
-PROMPT='%F{cyan}[Adrian_Garcia]%f %F{yellow}%1~%f %(?.%F{green}✔.%F{red}✘ %?)%f %# '
-EOF
-
-# Comando por defecto al arrancar
+# 3. Asegurar que al arrancar el contenedor puro use Bash
 CMD ["/bin/bash"]
