@@ -10,5 +10,5 @@ ping "${TARGET}"
 echo "The total number of arguments is: $#"
 
 for arg in "$@"; do
-    echo "${arg}"
+echo "${arg}"
 done
