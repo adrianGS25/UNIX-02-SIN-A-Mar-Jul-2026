@@ -19,3 +19,8 @@ if check_root_function; then                         # Calls the function and ev
 else                                           # If the function returned 1
     echo "User is not root!"                   # Prints that the user is NOT root
 fi                                             # End of main if block
+
+# useradd -m luna
+# su - luna
+# whoami
+#id
