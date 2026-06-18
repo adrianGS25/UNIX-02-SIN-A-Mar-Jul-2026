@@ -7,3 +7,13 @@ ps | grep -i tty # Lists all processes and filters for those that have "tty" in 
 
 grep -v "35.237.4.214" log.txt # Displays all lines in log.txt that do not contain "35.237.4.214"
 grep -o "35.237.4.214" log.txt # Displays only the occurrences of "35.237.4.214" in log.txt
+
+awk '{print $1}' log.txt
+awk '{print $1,$2,$3}' log.txt
+awk '{print $2}' log.txt
+awk '{print $3}' log.txt
+awk '{print $1,$NF}' log.txt
+
+touch example_csv.txt
+apt update && apt install nano -y
+nano example_csv.txt
