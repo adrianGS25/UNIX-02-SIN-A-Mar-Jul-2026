@@ -28,3 +28,13 @@ sed 's/Mozilla/Godzilla/g' log.txt # Replaces all occurrences of "Mozilla" with 
 sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt # Creates a new file called newlog.txt that contains the contents of log.txt with all occurrences of "Mozilla" replaced by "Godzilla".
 grep "Mozilla" log.txt # Displays all lines in log.txt that contain "Mozilla".
 grep "Godzilla" newlog.txt # Displays all lines in newlog.txt that contain "Godzilla", which should be the modified version of the original log.txt.
+
+sed -i '1d' log.txt # Deletes the first line of log.txt in place, modifying the original file.
+git diff newlog.txt log.txt # Compares the contents of newlog.txt and log.txt, showing the differences between the two files.
+
+sed -i '$d' newlog.txt # Deletes the last line of newlog.txt in place, modifying the original file.
+git diff newlog.txt log.txt # Compares the contents of newlog.txt and log.txt again, showing the differences after deleting the last line of newlog.txt.
+
+sed 's/ //g' log.txt > newlog1.txt # Removes all spaces from log.txt and outputs the result to newlog1.txt.
+
+sed 's/ //g' log.txt > newlog1.txt # Removes all spaces from log.txt and saves the result to newlog1.txt.
