@@ -19,7 +19,12 @@ echo "hola1,chao1" >> example_csv.txt
 echo "hola2,chao2" >> example_csv.txt
 echo "hola3,chao3" >> example_csv.txt
 
-head log.txt
-awk -F',' '{print $1}' example_csv.txt
-awk 'NR < 10' log.txt
-grep "42.236.10.117" log.txt | awk '{print $7}'
+head log.txt # Displays the first 10 lines of log.txt using the head command.
+awk -F',' '{print $1}' example_csv.txt # Displays the first field of each line in example_csv.txt, using a comma as the field separator.
+awk 'NR < 10' log.txt # Displays the first 9 lines of log.txt using awk, where NR is the built-in variable that represents the current record number (line number) being processed.
+grep "42.236.10.117" log.txt | awk '{print $7}' # Displays the 7th field of lines in log.txt that contain "
+
+sed 's/Mozilla/Godzilla/g' log.txt # Replaces all occurrences of "Mozilla" with "Godzilla" in log.txt and outputs the result to the terminal.
+sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt # Creates a new file called newlog.txt that contains the contents of log.txt with all occurrences of "Mozilla" replaced by "Godzilla".
+grep "Mozilla" log.txt # Displays all lines in log.txt that contain "Mozilla".
+grep "Godzilla" newlog.txt # Displays all lines in newlog.txt that contain "Godzilla", which should be the modified version of the original log.txt.
