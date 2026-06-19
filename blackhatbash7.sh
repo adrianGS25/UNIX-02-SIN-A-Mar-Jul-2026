@@ -38,3 +38,6 @@ git diff newlog.txt log.txt # Compares the contents of newlog.txt and log.txt ag
 sed 's/ //g' log.txt > newlog1.txt # Removes all spaces from log.txt and outputs the result to newlog1.txt.
 
 sed 's/ //g' log.txt > newlog1.txt # Removes all spaces from log.txt and saves the result to newlog1.txt.
+
+sed -n '10,15 p' log.txt # Displays lines 10 through 15 of log.txt using sed, where -n suppresses automatic printing and '10,15 p' specifies the range of lines to print.
+
